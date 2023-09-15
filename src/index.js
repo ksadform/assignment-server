@@ -5,9 +5,11 @@ const { ApolloServer } = require("apollo-server-express");
 const {
   notificationResolvers,
 } = require("./modules/notification/notification.resolvers");
+
 const {
   notificationTypedefs,
 } = require("./modules/notification/notification.typedefs");
+
 const cors = require("cors");
 
 const server = new ApolloServer({

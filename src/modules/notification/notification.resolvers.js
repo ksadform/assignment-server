@@ -25,8 +25,6 @@ exports.notificationResolvers = {
       const sortQuery = buildSortQuery(sortModel);
       sortQuery.push(["createdAt", -1]);
 
-      console.log({ filterModel, sortModel, startRow, endRow });
-
       const [data, error] = await tryCatch(() =>
         NotificationModel.find(mongoQuery).sort(sortQuery)
       );
